@@ -1,13 +1,12 @@
 #
-# Cookbook Name:: basepkgs
+# Cookbook Name:: rhr-basepkgs
 # Recipe:: default
 #
 # Copyright 2015, YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
 
-#package 'strace'
-#package 'strace'
-
-%w[ strace tcpdump nmap mlocate ].each do |package|
-  end
+package 'strace'
+package 'tcpdump'
+package 'nmap'
+package 'mlocate'
