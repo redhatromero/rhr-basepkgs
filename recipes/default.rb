@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: rhr-basepkgs
+# Cookbook Name:: rhr_basepkgs
 # Recipe:: default
 #
 # Copyright 2015, YOUR_COMPANY_NAME
