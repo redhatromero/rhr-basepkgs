@@ -2,11 +2,40 @@
 # Cookbook Name:: rhr_basepkgs
 # Recipe:: default
 #
-# Copyright 2015, YOUR_COMPANY_NAME
+# Copyright 2015 YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
 
-package 'strace'
-package 'tcpdump'
-package 'nmap'
-package 'mlocate'
+include_recipe 'rhr_basepkgs::update'
+include_recipe 'chef-yum-docker'
+
+%w(
+  curl
+  gcc
+  gcc-c++
+  glibc-devel
+  glibc-headers
+  iputils
+  libcurl-devel
+  libgcc
+  libstdc++-devel
+  lsof
+  mlocate
+  net-tools
+  nmap
+  ntp
+  perl
+  perl-devel
+  python-pycurl
+  python-urlgrabber
+  rrdtool
+  rrdtool-devel
+  rrdtool-perl
+  strace
+  tcpdump
+  vim-enhanced
+  wget
+  yum-metadata-parser
+  yum-plugin-fastestmirror
+  yum-utils
+).each { |base| package base }
