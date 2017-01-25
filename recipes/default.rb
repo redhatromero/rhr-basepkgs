@@ -33,6 +33,7 @@ include_recipe 'chef-yum-docker'
   rrdtool-perl
   strace
   tcpdump
+  telnet
   vim-enhanced
   wget
   yum-metadata-parser
