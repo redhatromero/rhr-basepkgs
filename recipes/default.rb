@@ -24,6 +24,7 @@ include_recipe 'chef-yum-docker'
   net-tools
   nmap
   ntp
+  net-tools
   perl
   perl-devel
   python-pycurl
@@ -40,3 +41,5 @@ include_recipe 'chef-yum-docker'
   yum-plugin-fastestmirror
   yum-utils
 ).each { |base| package base }
+
+include_recipe 'labnet_ntp'
